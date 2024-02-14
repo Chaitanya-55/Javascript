@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1 id="id1">Chaitanya</h1>
+        <input id="id2" name="Firstname" placeholder="Please enter first name">
+        <ul>
+            <li>India</li>
+            <li>Sweden</li>
+            <li>UK</li>
+            <li>USA</li>
+            <li>Canada</li>
+        </ul>
+        <script>
+
+            var d = document.getElementById('id1')
+            d.setAttribute('title','Male')
+
+            var e = document.getElementById('id2')
+            e.setAttribute('type','chaitu')
+
+
+
+            var a = document.getElementsByTagName('li')
+            console.dir(a)
+
+            var b = document.querySelectorAll('li')
+            console.dir(b)
+
+            // for(i=0;i<=b.length-1;i++){
+            // b[i].style.color = 'red'
+            // }
+
+            b.forEach(function(c,i,a){
+                c.style.backgroundColor = 'Blue'
+                c.style.margin = '5px'
+                c.style.color = 'White'
+                c.style.padding = '2px'
+                console.log(i,a)
+            })
+           
+
+
+        </script>
+    </body>
+</html>
