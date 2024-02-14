@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+     <body>
+          <script>
+                var ratings = [
+                    {
+                          name:'chaitu',
+                          rating:4
+                    },
+                    {
+                          name:'Baby',
+                      rating:4
+                    },
+                    {
+                         name:'Amma',
+                       rating:2
+                    }, 
+                    {
+                         name:'Dady',
+                        rating:5
+                    }, 
+                    {
+                          name:'Ram',
+                          rating:3
+                    },
+                    {
+                         name:'Seetha',
+                       rating:2
+                    }, 
+                    {
+                         name:'Lakshmana',
+                        rating:5
+                    }, 
+                    {
+                          name:'Arjuna',
+                          rating:3
+                    },
+                ]
+               
+               var ratingCounter = {
+                    1:0,
+                    2:0,
+                    3:0,
+                    4:0,
+                    5:0
+               }
+               for (var i=0;i<=ratings.length-1;i++){
+                   // ratingCounter[ratings[i].rating]++
+                   if(ratings[i].rating===1){
+                    ratingCounter[1]++
+                   }
+                   if(ratings[i].rating===2){
+                    ratingCounter[2]++
+                   }
+                   if(ratings[i].rating===3){
+                    ratingCounter[3]++
+                   }
+                   if(ratings[i].rating===4){
+                    ratingCounter[4]++
+                   }
+                   if(ratings[i].rating===5){
+                    ratingCounter[5]++
+                   }
+                  
+               }
+               console.log(ratingCounter)
+               
+                    
+               
+          </script>
+     </body>
+</html>
