@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <input type="text" id="id1" onkeyup="abc(event)">
+        <input type="radio" name="gen" value="male" onchange="updateGender(event)">:Male
+        <input type="radio" name="gen" value="female" onchange="updateGender(event)">:Female
+        <input type="radio" name="gen" value="other" onchange="updateGender(event)">:Other
+        <h1 id="id2"></h1>
+        <script>
+            function abc(e){
+                document.getElementById('id2').innerHTML=e.target.value;
+            }
+
+            function updateGender(e){
+                document.getElementById('id2').innerHTML=e.target.value
+
+            }
+
+        </script>
+    </body>
+</html>

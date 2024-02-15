@@ -1,0 +1,40 @@
+<html>
+    <body>
+        <h1 id="id1"></h1>
+        <button onclick="xyz()">Previous Student</button>
+        <button onclick="abc()">Next Student</button>
+    
+        <!-- <button onclick="abc()">Lets see Events</button>
+        <div onclick="xyz()">Edupoly</div> -->
+        <script>
+            // function abc(){
+            //     document.write('Hi')
+            // }
+
+            // function xyz(){
+            //     alert('Code your Career')
+            // }
+            var d=0
+
+            var students = ['Chaitu','Baby','Dady','Amma']
+            var x = document.getElementById('id1');
+            x.innerHTML=students[d]
+
+            function abc(){
+                d++
+                if(d===students.length){
+                    d=0
+                }
+               x.innerHTML=students[d]
+            }
+            function xyz(){
+                d--
+                 if(d===-1){
+                    d=students.length-1
+                 }
+                x.innerHTML=students[d]
+            }
+            
+        </script>
+    </body>
+</html>
