@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <ul id="id1">
+            <li>Chai</li>
+            <li>Baby</li>
+            <li>Amma</li>
+            <li>Dady</li>
+            <li>Puji</li>
+            <li>Ram</li>
+        </ul>
+        <ol id="id2">
+
+        </ol>
+     
+        
+        <script>
+            var ar = ['Chai','Baby','Amma','Dady','Puji','Ram']
+            console.dir(ar)
+            ar.forEach(function(el){
+                var newli = document.createElement('li')
+                newli.innerHTML = el
+                
+                var x = document.getElementById('id2').appendChild(newli)
+            })
+            ar.forEach(function(val){
+                var newelement = document.createElement('h1')
+                newelement.innerHTML = val
+                document.body.appendChild(newelement)
+
+                
+            })
+            
+
+            
+
+        </script>
+    </body>
+</html>

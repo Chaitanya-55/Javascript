@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        .d1{
+          color : rgb(0, 0, 0);
+        }
+    </style>
+    </head>
+    <body>
+        <h1 class="d1">Hello Chaitu</h1>
+        <h3 class="d1">Onclick is event listner and abc() is event handler > combining both eent listner and event handler is called event binding</h3>
+        <button onclick="abc()">Change the color of Chaitu</button>
+        <p>We Provide Industry Ready Corporate Training for 
+            freshers and upskilling professionals. Blend on 
+            complete foundation and realtime usecases is our 
+            promise to corporates and we provided with conviction.
+        </p>
+        <p>Many Freshers are transformed to employable resources 
+            from our Bootcamp Training. Industry level problem 
+            statements, design patterns and bestpractices are 
+            inducted in freshes with minimalistic approach is 
+            our approach.
+        </p>
+        <p>Introduction to Industry Standards and Practices
+            at College level helped thousands of students
+            to get motivated and successful. We deliver
+            the process of Incorporating conceptual depth
+            elates students to get confidence and capability
+            to be a fruitful career.
+        </p>
+        <p>We Provide Industry Ready Corporate Training for 
+            freshers and upskilling professionals. Blend on 
+            complete foundation and realtime usecases is our 
+            promise to corporates and we provided with conviction.
+        </p>
+        <p>Many Freshers are transformed to employable resources 
+            from our Bootcamp Training. Industry level problem 
+            statements, design patterns and bestpractices are 
+            inducted in freshes with minimalistic approach is 
+            our approach.
+        </p>
+        <p>Introduction to Industry Standards and Practices
+            at College level helped thousands of students
+            to get motivated and successful. We deliver
+            the process of Incorporating conceptual depth
+            elates students to get confidence and capability
+            to be a fruitful career.
+        </p>
+        <button onclick="xyz()">Chnage the background color of Paragraph</button>
+        <h1 id="id1">Hello Javascript</h1>
+        <button onclick="onClick()">Change Content</button>
+
+        <script>
+            function abc(){
+                var x = document.getElementsByClassName('d1')
+                for(var i = 0;i<=x.length-1;i++){
+                    if(x[i].style.color === ''){
+                        x[i].style.color = 'blue'
+                    }
+                    else{
+                        x[i].style.color = ''
+                    }
+                    
+                }
+            }
+
+            function xyz(){
+                var y = document.getElementsByTagName('p')
+                for(var i = 0;i<=y.length-1;i++){
+                    if(i%2===0 && y[i].style.backgroundColor===''){
+                        y[i].style.backgroundColor = 'red'
+                    }
+                    else{
+                        y[i].style.backgroundColor = ''
+                    }
+                }
+            }
+
+            function onClick(){
+                var z = document.getElementById('id1')
+                if(z.innerHTML==='Hello Javascript'){
+                    z.innerHTML='NTR'
+                }
+                else{
+                    z.innerHTML='Hello Javascript'
+                }
+                
+                
+            }
+            
+        </script>
+    </body>
+</html>
