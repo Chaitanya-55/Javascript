@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        Company:<input type="text" id="company"><br>
+        Experience:<input type="text" id="exp"><br>
+        Salary:<input type="text" id="salary"><br>
+        <button onclick="addExperience()">Add Experience</button>
+       <table border="1px" width="50%" align="center">
+        <thead >
+            <th>S.no</th>
+            <th onclick="sortByCompany()">Company</th>
+            <th onclick="sortByExp()">Experience</th>
+            <th onclick="sortBySalary()">Salary</th>
+        </thead>
+        <tbody id="id1">
+        </tbody>
+       </table>
+       
+        <script>
+             var myexp = [
+        {
+            company:'cmc',
+            exp:1,
+            salary:284000
+        },
+        {
+            company:'cts',
+            exp:2,
+            salary:19000
+        },
+        {
+            company:'wipro',
+            exp:4,
+            salary:55000
+        },
+        {
+            company:'google',
+            exp:10,
+            salary:42000
+        },
+        {
+            company:'amazon',
+            exp:7,
+            salary:40000
+        },
+        ]
+       genUI()
+        function sortByCompany(){
+            myexp.sort(function(a,b){
+                    if(a.company>b.company){
+                        return 1
+                    }
+                    else{
+                        return -1
+                    }
+                })
+               
+                genUI()
+        }
+
+        function sortByExp(){
+            myexp.sort(function(a,b){
+                    if(a.exp>b.exp){
+                        return 1
+                    }
+                    else{
+                        return -1
+                    }
+                })
+                genUI()
+            
+        }
+
+        function sortBySalary(){
+            myexp.sort(function(a,b){
+                    if(a.salary>b.salary){
+                        return 1
+                    }
+                    else{
+                        return -1
+                    }
+                })
+                
+               genUI()
+        
+        }
+
+        function addExperience(){
+            var newExperience = {
+                company : '',
+                exp: '',
+                salary: ''
+            }
+            newExperience.company=document.getElementById('company').value
+            newExperience.exp=+document.getElementById('exp').value
+            newExperience.salary=+document.getElementById('salary').value
+            myexp.push(newExperience)
+            genUI()
+            }
+
+
+        function genUI(){
+                document.getElementById('id1').innerHTML=''
+                myexp.forEach(function(c,i){
+                var newtr = document.createElement('tr')
+            var snotd = document.createElement('td');
+            snotd.innerHTML=i+1;
+            var companytd = document.createElement('td');
+            companytd.innerHTML=c.company;
+            var exptd = document.createElement('td');
+            exptd.innerHTML=c.exp;
+            var salarytd = document.createElement('td');
+            salarytd.innerHTML=c.salary;
+            newtr.appendChild(snotd)
+            newtr.appendChild(companytd)
+            newtr.appendChild(exptd)
+            newtr.appendChild(salarytd)
+            document.getElementById('id1').appendChild(newtr)
+                })
+            }
+
+        </script>
+    </body>
+</html>
