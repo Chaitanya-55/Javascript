@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <!-- How to access form data --> 
+        <form onsubmit="abc(event)" name="studentform"> 
+            <label for="">Firstname</label>
+            <input type="text" name="firstname" onkeyup="updateStudent(event)">
+            <br>
+            <label for="">Lastname</label>
+            <input type="text" name="lastname" onkeyup="updateStudent(event)">
+            <br>
+            <label for="">Mobile Number</label>
+            <input type="number" name="mobile" onkeyup="updateStudent(event)">
+            <br>
+            <button  onclick="addStudentData(event)">Add Student</button>
+        </form>
+        <br>
+        <table border="2">
+            <thead>
+                <th>S.no</th>
+                <th>firstname</th>
+                <th>lastname</th>
+                <th>mobile</th>
+
+            </thead>
+            <tbody id="d1"></tbody>
+        </table>
+        <script>
+            var studentDetails = {
+                firstname:'',
+                lastname:'',
+                mobile:''
+            }
+
+            function updateStudent(e){
+                // if(e.target.name === 'firstname'){
+                //     studentDetails.firstname = e.target.name
+
+                // }
+                // if(e.target.name === 'lastname'){
+                //     studentDetails.lastname = e.target.value
+
+                // }
+                // if(e.target.name === 'mobile'){
+                //     studentDetails.mobile = e.target.value
+
+                // }
+
+                studentDetails[e.target.name] = e.target.value
+                
+            }
+
+            function abc(ev){
+                ev.preventDefault();
+                 
+            //   studentDetails.firstname =  document.studentform.firstname.value;
+            //   studentDetails.lastname =  document.studentform.lastname.value;
+            //   studentDetails.mobile =  document.studentform.mobile.value;
+              console.log(studentDetails)
+            }   
+ 
+            function addStudentData(){
+                
+     
+               
+            }
+
+            
+        </script>
+    </body>
+</html>
