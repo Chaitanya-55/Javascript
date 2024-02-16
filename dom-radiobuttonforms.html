@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <label for="">Gender:</label>
+        <br>
+        <input type="radio" value="Male" name="gender" onchange="gender(event)">:Male &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" value="Female" name="gender" onchange="gender(event)">:Female &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" value="Others" name="gender" onchange="gender(event)">:Others &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br> 
+        <h1>Selected Gender:<span id="id1"></span></h1><br/>
+        <label for="">Games:</label>
+        <br>
+        <input type="checkbox" name="games" value="Cricket" onchange="games(event)">Cricket
+        <input type="checkbox" name="games" value="Football" onchange="games(event)">Football
+        <input type="checkbox" name="games" value="Basketball" onchange="games(event)">Basketball
+        <input type="checkbox" name="games" value="Rugby" onchange="games(event)">Rugby
+        <h1>Selected Games:<span id="id2"></span></h1>
+        <br/>
+
+        
+       
+
+        
+        <script>
+            var selectedGames = [];
+            function gender(v){
+               document.getElementById('id1').innerHTML= v.target.value  
+            }
+            function games(d){
+
+                if(d.target.checked === false){
+                    var ind = selectedGames.indexOf(d.target.value)
+                    selectedGames.splice(ind,1)
+                }  
+                else{
+                    selectedGames.push(d.target.value)
+                }
+                
+                document.getElementById('id2').innerHTML= selectedGames
+            }
+
+        </script>
+    </body>
+</html>
