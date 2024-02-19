@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            var ar = [10,20,30,40]
+            var br = []
+            //  for(var i=0;i<=ar.length-1;i++){
+            //      setTimeout(function(){
+            //          alert(i)
+            //      },1000)
+            //  }
+
+            //  ar.forEach(function(a,j){
+            //      setTimeout(function(){
+            //          alert(a)
+            //      })
+            //  })
+
+            ar.forEach(function(a,g){
+                br.push(function(){
+                    console.log('hi',g)
+                })
+            })
+            console.log(br)
+            br[2]();
+
+            
+
+             
+        </script>
+    </body>
+</html>
