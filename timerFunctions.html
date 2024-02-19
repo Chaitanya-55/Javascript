@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            console.log('first line')
+            console.log('second line')
+            var i=1;
+            var timer1 = setTimeout(function(){
+               console.log('inside setTimeout')
+            },1000)
+            
+            var timer1 = setInterval(function(){
+                console.log(i)
+                i+=1;
+                if(i==11){
+                    clearInterval(timer1)
+                }
+            },1000)
+
+           
+
+            console.log('last line')
+        </script>
+    </body>
+</html>
