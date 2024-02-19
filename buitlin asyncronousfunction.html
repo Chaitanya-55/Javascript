@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js"></script>
+    </head>
+    <body>
+        <table width="1px" border="1" cellpadding="1px" width="100%" height"100%" align="center">
+            <tr>
+                <td>id</td>
+                <td>title</td>
+                <td>price</td>
+                <td>description</td>
+                <td>category</td>
+                <td>image</td>
+                <td>rating</td>
+            </tr>
+        </table>
+
+        <script>
+        //     var ar = [10,20,30,40,50,60,70];
+        //    ar.map(function(a){
+        //         console.log(a)
+        //         return ar*10
+        //     })
+        //     console.log('hi')
+            
+        // var http = new XMLHttpRequest();
+        // console.log(http.response)
+        // http.open('GET','https://fakestoreapi.com/products',true); //preparation
+        // http.send() //sending and it gets response to http method.
+        // console.log(http.response) //
+
+        axios.get('https://fakestoreapi.com/products').then(function(res){
+            console.dir(res.data)
+        })
+
+
+            
+        </script>
+    </body>
+</html>

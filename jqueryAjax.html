@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> <!-- jquery link add cheste jquery object create avtadi-->
+    </head>
+    <body>
+        <script>
+            // // console.dir(window)
+            // // console.dir(jQuery)
+            // // console.dir($)
+
+            // $.get('https://fakestoreapi.com/products',
+            // function(res){
+            //     console.log(res)
+            // })
+            
+            // // get function request pamputadi and response
+            // //  kuda get function ke vastadi.
+            // //  a response ni manam call back function call chestadi and data ni pass chestam
+            // console.log('Hi') //this code will run first and then the ajax(get) function  
+            // console.log(10+20)
+
+        var http = new XMLHttpRequest();
+        console.log(http.response)
+        http.open('GET','https://fakestoreapi.com/products',true); //preparation
+        http.send() //sending and it gets response to http method.
+        http.onloadend = function(){
+            console.log(http.response)
+        }
+        // setTimeout(function(){
+        //     console.log(http.response)
+        // },2000)
+        console.log('Hi')
+       
+            
+        </script>
+    </body>
+</html>
