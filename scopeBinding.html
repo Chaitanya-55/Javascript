@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            button{
+                display:block;
+                margin: 10px;
+                width:50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="id1">
+
+        </div>
+        <script>
+        var ar = [10,20,30,40];
+        ar.forEach(function(a,i){
+            var button = document.createElement('button')
+            button.innerHTML = a
+            button.onclick = function(){
+                alert(i)
+            }
+            document.getElementById('id1').appendChild(button)
+        })
+
+
+        // for(var i = 0; i<=ar.length-1; i++){
+        //     var btn = document.createElement('button')
+        //     btn.innerHTML = ar[i]
+        //     btn.onclick=function(){
+        //         alert(ar[i])
+        //     }
+        //     document.getElementById('id1').appendChild(btn)
+        // }
+
+        
+    </script>
+    </body>
+</html>
